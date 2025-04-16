@@ -40,3 +40,5 @@ models:
     # Applies to all files under models/example/
     SNOWFLKE:
       +materialized: table
+    multi_table:
+      +materialized: table
