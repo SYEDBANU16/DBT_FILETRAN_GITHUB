@@ -3,7 +3,7 @@ XMLGET(s.value, 'Transaction_ID'):"$"::int as "Transaction_ID",
 XMLGET(s.value, 'Customer_ID'):"$"::string as "Name",
 XMLGET(s.value, 'Transaction_Date'):"$"::date as "Transaction_Date",
 XMLGET(s.value, 'Transaction_Type'):"$"::string as "Transaction_Type",
-XMLGET(s.value, 'Transaction_Amount'):"$"::int as "Transaction_Amount"
+XMLGET(s.value, 'Transaction_Amount'):"$"::int as "Transaction_Amount",
 XMLGET(s.value, 'Transaction_Mode'):"$"::string as "Transaction_Mode" 
 FROM MYDB.XML_SNF.TRANSACTION_DATA
 LATERAL FLATTEN(TO_ARRAY(MYDB.XML_SNF.TRANSACTION_DATA._DATA:"$")) s
