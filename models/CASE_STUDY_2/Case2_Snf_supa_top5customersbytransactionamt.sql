@@ -8,6 +8,7 @@ select * from (select
 	B.ACCOUNTNUMBER ,
 	B.BRANCH,
     B.BALANCE,
+    B.ACCOUNT_TYPE,
    dense_rank() over (order by T."Transaction_Amount"  desc ) as  rnk  
 from 
 MYDB.DBT.XML_SNF_CASESTD2_TRANSACTION_DETAILS  as T
