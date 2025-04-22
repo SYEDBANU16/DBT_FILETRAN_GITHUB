@@ -6,7 +6,7 @@ select
 	T."Transaction_Amount",
 	T."Transaction_Mode" ,
 	B.ACCOUNTNUMBER ,
-	B.BRANCH 
+	B.BRANCH ,B.BALANCE
 from 
 MYDB.DBT.XML_SNF_CASESTD2_TRANSACTION_DETAILS  as T
 INNER JOIN 
